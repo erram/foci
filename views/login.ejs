@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style/app.css">
+</head>
+<body>
+<% include header %>
+    <div id="main-content" class="container">
+
+        <div class="article-container">
+
+    <% if (message.length > 0) { %>
+        <div class="alert alert-danger"><%= message %></div>
+    <% } %>
+
+    <!-- LOGIN FORM -->
+    <form action="/login" method="post">
+        <div class="form-group">
+            <label>Email</label>
+            <input type="text" class="form-control" name="email">
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" class="form-control" name="password">
+        </div>
+
+        <button type="submit" class="btn btn-warning btn-lg">Login</button>
+    </form>
+
+    <hr>
+
+    <p>Nincs fiókod? <a href="/signup">Regisztrálj</a></p>
+    <p>Vagy <a href="/">főoldal</a>.</p>
+      </div>
+    </div>
+
+    <% include footer %>
+<script src="js/app-min.js"></script>
+</body>
+</html>
