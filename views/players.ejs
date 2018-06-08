@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style/app.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+<style>
+    p {
+        font-size: 12px;
+    }
+</style>
+<body>
+    <% include header %>
+    <div id="main-content" class="container">
+
+        <div class="article-container">
+            <% for (var i = 0; i < players.length; i++) { %>
+                <p><b><%- players[i].NÉV %></b></p>
+            <% } %>
+        </div>
+    </div>
+
+    <% include footer %>
+<script src="js/app-min.js"></script>
+</body>
+</html>
